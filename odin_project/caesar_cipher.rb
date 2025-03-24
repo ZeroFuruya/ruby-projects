@@ -69,6 +69,14 @@ end
 
 puts caesar_cipher("What a string!", 5)
 
+
+time = Benchmark.measure do
+  stock_picker(stock_prices)
+end
+
+puts time
+
+
 # Optional: User Input
 # print 'Enter a string to cipher: '
 # str_in = gets.chomp
