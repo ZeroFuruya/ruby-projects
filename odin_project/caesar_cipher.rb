@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'benchmark'
 
 # Documentation: Used Claude AI to generate documentation
 
@@ -67,15 +68,15 @@ def first_last_ord(chr)
   { first: first_alphabet, last: last_alphabet }
 end
 
-puts caesar_cipher("What a string!", 5)
-
+test_string = "The quick brown fox jumps over the lazy dog. " * 10000 + 
+              "ABCDEFGHIJKLMNOPQRSTUVWXYZ" * 5000 + 
+              "!@#$%^&*()_+-=[]{}|;':\",./<>?" * 2000
 
 time = Benchmark.measure do
-  stock_picker(stock_prices)
+  caesar_cipher(test_string, 5)
 end
 
 puts time
-
 
 # Optional: User Input
 # print 'Enter a string to cipher: '
