@@ -1,4 +1,4 @@
-require_relative '../stock_picker'
+require_relative '../../stock_picker'
 
 RSpec.describe '#stock_picker' do
   it 'returns the best days to buy and sell for max profit' do
